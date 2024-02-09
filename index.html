@@ -1,59 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario De Cadastro</title>
-</head>
-<body>
-    <h1>Formulario De Cadastro</h1>
-    <form>
-        <fieldset>
-            <legend>dados Pessoais</legend>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulário de cadastro</title>
 
-        <label for="nome">nome</label>
-        <input type ="text" name="nome" id="nome" required><br>
-        <label for="sobrenome">Sobrenome</label>
-        <input type="text" name="sobrenome" id="sobrenome" required><br>
-        <label for="data-nascimento">Data de nascimento</label>
-        <input type="date" name="data-nascimento"id="data-nascimento"required><br>
+        <!-- CRIAR ESSE ARQUIVO -->
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Formulário de Cadastro</h1>
+		<form>
+			<fieldset>
+				<legend>Dados Pessoais</legend>
+                <div class="inputs-dados">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required />
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome" id="sobrenome" required />
+                    <label for="data-nascimento">Data de Nascimento</label>
+                    <input type="date" name="data-nascimento" id="data-nascimento" required />
+                </div>
+		
+                <fieldset id="fieldset-genero">
+					<legend>Gênero</legend>
+					<input type="radio" name="genero" id="genero-masculino" required checked />
+					<label for="genero-masculino">Masculino</label><br /><br />
+					<input type="radio" name="genero" id="genero-feminino" required />
+					<label for="genero-feminino">Feminino</label><br />
+				</fieldset>
+			</fieldset>
 
-    <fieldset>
-        <legend>Genero</legend>
-        <input type="radio" name="genero" id="genero-masculino"required>
-        <label for="genero-masculino">Masculino</label><br>
-        <input type="radio" name="genero" id="genero-feminino"required>
-        <label for="genero-feminino">Feminino</label><br>
-    </fieldset>
-    </fieldset>
+			<fieldset>
+				<legend>Endereço</legend>
+                <div class="inputs-dados">
+                    <label for="rua">Rua</label>
+                    <input type="text" name="rua" id="rua" required />
+                    <label for="numero">Número</label>
+                    <input type="number" name="numero" id="numero" required />
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" required />
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" required />    
+                </div><br />
+                
+				<label for="estado">Estado</label>
+				<select id="estado" title="Selecione uma opção">
+					<option value="aa" disabled selected>Selecione </option>
+					<option value="AC" title="Acre">AC</option>
+					<option value="AL" title="Alagoas">AL</option>
+					<option value="ap" title="Amapá">AP</option>
+					<option value="am" title="Amazonas">AM</option>
+					<option value="BA" title="Bahia">BA</option>
+					<option value="CE" title="Ceará">CE</option>
+					<option value="ES" title="Espírito Santo">ES</option>
+					<option value="GO" title="Goiás">GO</option>
+					<option value="MA" title="Maranhão">MA</option>
+					<option value="MT" title="Mato Grosso">MT</option>
+					<option value="MS" title="Mato Grosso do Sul">MS</option>
+					<option value="MG" title="Minas Gerais">MG</option>
+					<option value="PA" title="Paraná">PA</option>
+					<option value="PB" title="Paraíba">PB</option>
+					<option value="PB" title="Paraíba">PB</option>
+					<option value="PE" title="Pernambuco">PE</option>
+					<option value="PI" title="Piauí">PI</option>
+					<option value="RJ" title="Rio de Janeiro">RJ</option>
+					<option value="RN" title="Rio Grande do Norte">RN</option>
+					<option value="RS" title="Rio Grandedo Sul">RS</option>
+					<option value="RO" title="Rondônia">RO</option>
+					<option value="RR" title="Roraima">RR</option>
+					<option value="SC" title="Santa Catarina">SC</option>
+					<option value="SP" title="São Paulo">SP</option>
+					<option value="SE" title="Sergipe">SE</option>
+					<option value="TO" title="Tocantins">TO</option>
+                </select><br /><br/ >
 
-        <fieldset>
-            <legend>Endereço</legend>
-            <label for="Rua">Rua</label>
-            <input type="text" name="Rua" id="Rua" required><br>
-            <label for="numero">Numero</label>
-            <input type="number" name="numero" id="numero" required><br>
-            <label for="bairro">Bairro</label>
-            <input type="text" name="bairro" id="bairro" required><br>
-            <label for="cidade">Cidade</label>
-            <input type="text" name="cidade" id="cidade" required><br>
-            <label for="estado">Estado</label>
-            <input type="text" name="estado" id="estado" required><br>
-            <label for="cep">Cep</label>
-            <input type="text" name="cep" id="cep" required><br>
-            <label for="pais">Pais</label>
-            <input type="text"name="pais" id="pais" required><br>
-        </fieldset>
+                <div class="inputs-dados">
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" required />
+                    <label for="pais">País</label>
+                    <input type="text" name="pais" id="pais" required />
+                </div>
+			</fieldset>
 
-        <fieldset>
-            <legend>Contato</legend>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id= "email"required><br>
-            <label for="telefone">Telefone</label>
-            <input type= type= "tel" name="telefone" id="telefone"required><br>
-        </fieldset>
-        <input type="submit" value= "enviar"/>
-        <input type="reset" value="limpar"/>
-    </form>
-</body>
+			<fieldset>
+				<legend>Contato</legend>
+                <div class="inputs-dados">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" required />
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" required />
+                </div>
+			</fieldset>
+
+			<div id="div-input-submit-reset">
+                <input type="submit" value="Enviar" />
+    			<input type="reset" value="Limpar" />
+            </div>
+		</form>
+	</body>
 </html>
